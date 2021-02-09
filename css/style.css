@@ -1,0 +1,171 @@
+/* Commons */
+
+body {
+    background: #e9e3e3;
+}
+
+
+.thin {
+    font-weight: 100;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+p {
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 3em 0;
+}
+
+ul {
+    font-weight: 500;
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.spacer {
+    flex: 1
+}
+
+.purple1 {
+    color: #320CAF;
+}
+
+.red1 {
+    color: #dd2828;
+}
+
+.red2 {
+    color: #7c0707
+}
+
+.blue1 {
+    color: #0c568D
+}
+
+.blue2 {
+    color: #223289;
+}
+
+.blue3 {
+    color: #023960;
+}
+
+
+
+/* App */
+
+header {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+header .menu {
+    width: 33%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title__main {
+    font-size: 6em;
+}
+
+.title__sub {
+    font-size: 1.8em;
+    margin-top: 0.2em;
+}
+
+.title__descr {
+    margin-top: 1.5em;
+    margin-left: -2em;
+}
+
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 8em auto;
+}
+
+.main-container>div:not(.languages) {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 2em;
+}
+
+.languages {
+    display: flex;
+    margin-left: 2em;
+    margin-right: 4em;
+    flex-direction: column;
+}
+
+.languages__item {
+    color: #16247160;
+    font-size: 1.6em;
+    margin-bottom: 1em;
+    margin-bottom: 3em;
+}
+
+.languages__item-active {
+    color: #320CAF;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__header {
+    margin-bottom: 2em;
+
+    font-size: 1.3em;
+}
+
+
+
+.form-group {
+    display: flex;
+}
+
+.form-group__field {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    flex: 1;
+}
+
+.form-group__field label {}
+
+.form-group__field input {
+    background: #e9e3e3;
+    border-color: #320CAF;
+    width: 100%;
+    outline: 0;
+    border-width: 0 0 2px;
+}
