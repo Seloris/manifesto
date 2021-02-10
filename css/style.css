@@ -49,20 +49,29 @@ ul {
     color: #320CAF;
 }
 
+.purple2 {
+    color: #816cc4;
+}
+
+
 .red1 {
-    color: #dd2828;
+    color: #d14e14;
 }
 
 .red2 {
     color: #7c0707
 }
 
+.red3 {
+    color: #af4e23;
+}
+
 .blue1 {
-    color: #0c568D
+    color: #223289
 }
 
 .blue2 {
-    color: #223289;
+    color: #0c568d;
 }
 
 .blue3 {
@@ -70,17 +79,64 @@ ul {
 }
 
 
+.grey1 {
+    color: #7c86a3;
+}
+
+.grey2 {
+    color: #4c5879;
+}
+
+
 
 /* App */
+.app {
+    max-width: 1200px;
+    margin: 0 40px;
+
+}
 
 header {
-    margin-top: 1em;
     display: flex;
     justify-content: center;
 }
 
 header .menu {
+    margin-top: 1.1em;
     width: 33%;
+}
+
+.menu__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu__bar__title {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.menu__bar__separator {
+    margin: 0 2em;
+    width: 1px;
+    height: 20px;
+    background: #4c5879;
+}
+
+.menu__flags {
+    display: flex;
+}
+
+img.menu__flag {
+    height: 12px;
+    margin: 0 1em;
+}
+
+.menu__text {
+    margin-top: 2em;
+    font-size: 0.8em;
+    width: 66%;
 }
 
 .title {
@@ -89,63 +145,51 @@ header .menu {
 }
 
 .title__main {
-    font-size: 6em;
+    font-size: 4em;
+    margin-left: 40px;
 }
 
 .title__sub {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-top: 0.2em;
+    margin-left: 40px;
 }
 
 .title__descr {
-    margin-top: 1.5em;
-    margin-left: -2em;
+    margin-top: 1.2em;
+    font-size: 0.8em;
 }
 
 
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 8em auto;
+    margin: 6em 0;
 }
 
-.main-container>div:not(.languages) {
-    flex: 1;
+.main-container>div:not(.form) {
     min-width: 200px;
-    margin: 0 2em;
+    flex: 1;
+    margin: 0 1.5em;
 }
 
-.languages {
-    display: flex;
-    margin-left: 2em;
-    margin-right: 4em;
-    flex-direction: column;
-}
-
-.languages__item {
-    color: #16247160;
-    font-size: 1.6em;
-    margin-bottom: 1em;
-    margin-bottom: 3em;
-}
-
-.languages__item-active {
-    color: #320CAF;
-}
 
 
 .form {
     display: flex;
+    width: 132px;
+    margin-right: 2em;
     flex-direction: column;
 }
 
 .form__header {
-    margin-bottom: 2em;
-
     font-size: 1.3em;
+    margin-bottom: 1em;
 }
 
+.form__intro {
+    font-size: 0.85em;
+}
 
 
 .form-group {
@@ -164,8 +208,12 @@ header .menu {
 
 .form-group__field input {
     background: #e9e3e3;
-    border-color: #320CAF;
+    border-color: #7c86a3;
     width: 100%;
     outline: 0;
     border-width: 0 0 2px;
+}
+
+.form__sign {
+    font-weight: 500;
 }
