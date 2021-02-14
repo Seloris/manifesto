@@ -45,13 +45,6 @@ ul {
     flex: 1
 }
 
-.purple1 {
-    color: #320CAF;
-}
-
-.purple2 {
-    color: #816cc4;
-}
 
 
 .red1 {
@@ -88,6 +81,23 @@ ul {
 }
 
 
+a {
+    color: #3059c4;
+    text-decoration: underline;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox label {
+    margin-top: -4px;
+    margin-left: 8px;
+    font-size: 0.85em;
+}
+
+
 
 /* App */
 .app {
@@ -112,25 +122,28 @@ header .menu {
     align-items: center;
 }
 
-.menu__bar__title {
+.menu__bar__title,
+.form__apropos__title {
     font-size: 1.3em;
     font-weight: 500;
 }
 
-.menu__bar__separator {
+/* .menu__bar__separator {
     margin: 0 2em;
     width: 1px;
     height: 20px;
     background: #4c5879;
-}
+} */
 
 .menu__flags {
+    margin-left: 48px;
+    margin-top: 6px;
     display: flex;
 }
 
 img.menu__flag {
     height: 12px;
-    margin: 0 1em;
+    margin: 0 0.75em;
 }
 
 .menu__text {
@@ -141,6 +154,7 @@ img.menu__flag {
 
 .title {
     display: flex;
+    color: #516ad3;
     flex-direction: column;
 }
 
@@ -158,13 +172,14 @@ img.menu__flag {
 .title__descr {
     margin-top: 1.2em;
     font-size: 0.8em;
+    color: #6c8ac4;
 }
 
 
 .main-container {
     display: flex;
     flex-wrap: wrap;
-    margin: 6em 0;
+    margin: 2em 0;
 }
 
 .main-container>div:not(.form) {
@@ -177,7 +192,7 @@ img.menu__flag {
 
 .form {
     display: flex;
-    width: 132px;
+    width: 162px;
     margin-right: 2em;
     flex-direction: column;
 }
@@ -216,4 +231,16 @@ img.menu__flag {
 
 .form__sign {
     font-weight: 500;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+    display: block;
+}
+
+.form__apropos__title {
+    margin-top: 2em;
+}
+
+.form__apropos {
+    font-size: 0.8em;
+    margin-top: 1em;
 }

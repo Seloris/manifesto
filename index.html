@@ -28,7 +28,7 @@
 
                 <div class="menu__bar">
                     <div class="menu__bar__title grey2">A propos</div>
-                    <div class="menu__bar__separator"></div>
+
                     <div class="menu__flags">
                         <img src="./img/france.png" alt="france" class="menu__flag">
                         <img src="./img/uk.png" alt="anglais" class="menu__flag">
@@ -37,18 +37,13 @@
                 </div>
 
                 <p class="menu__text grey1">Le manifeste « Pour une pratique soutenable de
-                    la création » est issu d’initiatives et d’échanges
-                    entre Annabel Vergne, Vonnik Hertig et Roxane
-                    Jubert, qui ont réuni un groupe rassemblant des
-                    étudiant·es, des personnels et des enseignant·es
-                    de l’EnsAD, afin d’engager une réflexion
-                    transversale et de parvenir à un texte commun,
-                    qui formule un engagement collectif face aux
-                    déséquilibres planétaires et aux enjeux de la
-                    transition écologique. La conception graphique et le développement du site ont été réalisés par
-                    Madeleine Lequoy et Daniel Djordjevic.</p>
+                    la création » est issu d’initiatives et d’échanges entre Vonnik Hertig et Roxane Jubert et Annabel
+                    Vergne, qui ont réuni un groupe rassemblant des étudiant·es, des personnels et des enseignant·es
+                    de l’ENSAD, afin d’engager une réflexion
+                    transversale et de parvenir à un texte qui formule un engagement collectif face aux déséquilibres
+                    planétaires et aux enjeux écologiques.</p>
             </div>
-            <div class="title purple1">
+            <div class="title">
                 <div class="title__main medium">Manifeste</div>
                 <div class="title__sub red1 medium">Pour une pratique soutenable <br>de la création</div>
                 <div class="title__descr purple2 bold">A l'initiative d'un groupe de l'Ecole<br> Nationale Supérieure
@@ -62,20 +57,23 @@
 
         <div class="main-container">
             <div class="form">
-                <div class="form__header red1 medium">Rejoindre<br> les signataires</div>
-                <p class="grey1 form__intro">Vous pouvez signer le manifeste anonymement ou non. Chaque information est
-                    optionnelle. Ces données seront visibles sur la page "signataires".</p>
+                <div class="form__header red1 medium">Rejoindre<br> les <span id="nb-signataires">160</span> <br><a
+                        href="./signataires.html">signataires</a>
+                </div>
+                <p class="grey1 form__intro">Vous pouvez signer en votre nom et/ou prénom avec un pseudonyme :
+                    ces mentions ainsi que
+                    votre e-mail, sont obligatoires. Les autres champs sont optionnels.</p>
                 <form class="grey1">
                     <div class="form-group__field">
-                        <label for="name">nom/pseudo</label>
+                        <label for="name">nom ou pseudonyme *</label>
                         <input type="text" name="name" />
                     </div>
                     <div class="form-group__field">
-                        <label for="name">prénom</label>
+                        <label for="name">prénom ou pseudonyme *</label>
                         <input type="text" name="name" />
                     </div>
                     <div class="form-group__field">
-                        <label for="name">email</label>
+                        <label for="name">e-mail</label>
                         <input type="text" name="name" />
                     </div>
                     <div class="form-group__field">
@@ -83,17 +81,28 @@
                         <input type="text" name="name" />
                     </div>
                     <div class="form-group__field">
-                        <label for="name">ville</label>
-                        <input type="text" name="name" />
-                    </div>
-                    <div class="form-group__field">
                         <label for="name">pays</label>
                         <input type="text" name="name" />
                     </div>
-                    <div class="form__sign">je signe</div>
-                    <br>
-                    <div>Contact</div>
-                    <div>manifeste@ensad.fr</div>
+                    <div class="checkbox">
+                        <input id="accept" name="accept" type="checkbox" />
+                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a
+                                href="./signataires.html">signataires</a>.
+                    </div>
+                    <a href="#" class="form__sign">Je signe
+                    </a>
+
+                    <div class="form__apropos__title grey2">A propos du site</div>
+                    <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
+                        Design
+                        Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig, en 2020-2021. Le
+                        graphisme de ce site reprend et prolonge les choix effectués pour <a target="_blank"
+                            href="https://www.animaux-online.com/data/document/2/1829.800.jpg">la première mise
+                            en forme de
+                            ce manifeste sur panneaux sérigraphiés</a>, basée sur un procédé de récupération de grands
+                        supports
+                        de bois et de restes d’encres sérigraphiques.
+                        Le développement a été assuré par Daniel Djordjevic.</p>
                 </form>
             </div>
 
@@ -199,6 +208,10 @@
                     que notre exigence d’éthique. Pour cela, il
                     nousfaut agir avec détermination, et viser une
                     transformation aussi lucide que stimulante.</p>
+                <div class="grey1">
+                    <div>Contact</div>
+                    <div>manifeste.environnement@ensad.fr</div>
+                </div>
             </div>
 
         </div>
