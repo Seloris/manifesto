@@ -6,3 +6,7 @@ select {
     position: relative;
     color: #223289;
 }
+
+#filter_countries {
+    max-width: 200px;
+}

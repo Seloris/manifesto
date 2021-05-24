@@ -58,12 +58,12 @@
         <div class="main-container">
             <div class="form">
                 <div class="form__header red1 medium">Rejoindre<br> les <span id="nb-signataires">160</span> <br><a
-                        href="./signataires.html">signataires</a>
+                        href="./signataires.php">signataires</a>
                 </div>
                 <p class="grey1 form__intro">Vous pouvez signer en votre nom et/ou prénom avec un pseudonyme :
                     ces mentions ainsi que
                     votre e-mail, sont obligatoires. Les autres champs sont optionnels.</p>
-                <form class="grey1">
+                <form class="grey1 sign-form">
                     <div class="form-group__field">
                         <label for="name">nom ou pseudonyme *</label>
                         <input type="text" name="name" />
@@ -87,10 +87,10 @@
                     <div class="checkbox">
                         <input id="accept" name="accept" type="checkbox" />
                         <label for="accept">J’accepte que ces informations soient affichées sur la page <a
-                                href="./signataires.html">signataires</a>.
+                                href="./signataires.php">signataires</a>.
                     </div>
-                    <a href="#" class="form__sign">Je signe
-                    </a>
+                    <a class="form__sign" href="javascript:;" onclick="document.getElementById('sign-form').submit();">Je signe</a>
+                    <input type="hidden" name="mess" value="Je signe"/>
 
                     <div class="form__apropos__title grey2">A propos du site</div>
                     <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
