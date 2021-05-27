@@ -15,33 +15,12 @@ $(() => {
     $('#sign-form').addClass('readonly');
 
     const params = urlParams.toString();
-    const str = params ? 'signataires.php?' + params : 'signataires.php';
+    const str = params ? 'index.php?' + params : 'index.php';
 
     history.pushState(null, '', str);
 
     $('#destination').val(str);
   }
-
-  $('#filter_countries').on('change', function (val) {
-    const v = val.currentTarget.value;
-    nav('pays', v);
-  });
-
-  $('#sort-names').on('change', function (val) {
-    const v = val.currentTarget.value;
-    nav('tri', v);
-  });
-
-  const nav = (key, value) => {
-    const urlParams = new URLSearchParams(window.location.search);
-
-    if (value) urlParams.set(key, value);
-    else {
-      urlParams.delete(key);
-    }
-
-    window.location.search = urlParams;
-  };
 
   $('.form input, .form select').on('change', (e) => {
     if (e.currentTarget.value && e.currentTarget.value != 'null') {

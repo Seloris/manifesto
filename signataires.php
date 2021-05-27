@@ -14,13 +14,6 @@ $pdo = new PDO($dsn, "root", "", $options);
 $countryFilter = isset($_GET["pays"]) ? htmlspecialchars($_GET["pays"]) : null;
 $sort = isset($_GET["tri"]) ? htmlspecialchars($_GET["tri"]) : null;
 
-// $link = mysqli_connect("localhost", "root", "", "manifesto");
-// // Check connection
-// if ($link->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-
-
 $order = 'ORDER BY signDate desc';
 
 $sql = "SELECT `firstName`, `lastName`, `email`, `activity`, `country`, `signDate`, C.country_name `countryName` FROM `signataires` 
@@ -47,13 +40,16 @@ if ($countryFilter)
 $sth->execute($params);
 $rows = $sth->fetchAll();
 
-$countrySql = "SELECT id, country_name FROM countries";
-$countryRes = $pdo->query($countrySql);
+$countryRes = $pdo->query("SELECT id, country_name FROM countries WHERE id in (SELECT C.id FROM countries C INNER JOIN Signataires S on S.Country = C.Id)");
 $countries = $countryRes->fetchAll();
+
+
+$countriesAll = $pdo->query("SELECT id, country_name FROM countries")->fetchAll();
 
 
 $total = $pdo->query('select count(*) from signataires')->fetchColumn();
 
+$pdo = null;
 ?>
 
 <head>
@@ -66,7 +62,8 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reboot.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/signataires.css" />
@@ -81,7 +78,17 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
             <div class="menu">
 
                 <div class="menu__bar">
-                    <div class="menu__bar__title grey2">A propos</div>
+                    <div class="menu__bar__title grey2">
+                        <div class="space-right">
+                            À propos
+                        </div><svg class="chevron chevron1" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+
+                            <g>
+                                <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 		" />
+                            </g>
+                        </svg>
+                    </div>
+
 
                     <div class="menu__flags">
                         <img src="./img/france.png" alt="france" class="menu__flag">
@@ -98,64 +105,109 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
                     planétaires et aux enjeux écologiques.</p>
             </div>
             <div class="title">
-                <div class="title__main medium">Manifeste</div>
-                <div class="title__sub red1 medium">Pour une pratique soutenable <br>de la création</div>
-                <div class="title__descr purple2 bold">A l'initiative d'un groupe de l'Ecole<br> Nationale Supérieure
+                <a href="./index.php" class="title__main medium">Manifeste</a>
+                <div class="title__sub red1 medium">pour une pratique soutenable <br>de la création</div>
+                <div class="title__descr purple2 bold">À l’initiative d’un groupe de l’École Nationale Supérieure <br>
                     des
                     Arts
-                    Décoratifs<br>
-                    (ENSAD, Paris, France)</div>
+                    Décoratifs (ENSAD, Paris, France)</div>
             </div>
             <div class="spacer"></div>
         </header>
 
         <div class="main-container">
             <div class="form">
-                <div class="form__header red1 medium">Rejoindre<br> les <span id="nb-signataires"><?php echo $total; ?></span> <br><a href="./signataires.php">signataires</a>
-                </div>
-                <p class="grey1 form__intro">Vous pouvez signer en votre nom et/ou prénom avec un pseudonyme :
-                    ces mentions ainsi que
-                    votre e-mail, sont obligatoires. Les autres champs sont optionnels.</p>
-                <form id="sign-form" class="grey1" action="add-signataire.php" method="post">
+                <a href="./signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
+                    <div class="underline">signataires</div>
+                </a>
+                <p class="grey1 form__intro">Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).</p>
+                <br>
+                <br>
+                <form id="sign-form" action="add-signataire.php" method="post">
+                    <?php
+                    $signed = isset($_GET['signed']) ?  $_GET['signed'] : 0;
+                    $url = $_SERVER["REQUEST_URI"];
+                    $query = parse_url($url, PHP_URL_QUERY);
+                    if (!$signed) {
+                        if ($query) {
+                            $url .= '&signed=1';
+                        } else {
+                            $url .= '?signed=1';
+                        }
+                    }
+                    ?>
+
+                    <input id="destination" type="hidden" name="destination" value="<?php echo $url ?>" />
+
                     <div class="form-group__field">
+                        <!-- <label for="lastName">nom ou pseudonyme *</label> -->
+                        <input id="lastName" required <?php echo $signed ? 'readonly' : '' ?> type="text" name="lastName" />
                         <label for="lastName">nom ou pseudonyme *</label>
-                        <input type="text" name="lastName" />
+
                     </div>
                     <div class="form-group__field">
-                        <label for="firstName">prénom ou pseudonyme *</label>
-                        <input type="text" name="firstName" />
+                        <input id="firstName" <?php echo $signed ? 'readonly' : '' ?> type="text" name="firstName" />
+                        <label for="firstName">prénom</label>
                     </div>
                     <div class="form-group__field">
-                        <label for="email">e-mail</label>
-                        <input type="text" name="email" />
+                        <input id="email" required <?php echo $signed ? 'readonly' : '' ?> type="email" name="email" />
+                        <label for="email">e-mail *</label>
                     </div>
                     <div class="form-group__field">
-                        <label for="activity">activité/situation</label>
-                        <input type="text" name="activity" />
-                    </div>
-                    <!-- <div class="form-group__field">
-                        <label for="country">pays</label>
-                        <input type="text" name="country" />
-                    </div> -->
-                    <div class="form-group__field">
-                        <label for="country">pays</label>
-                        <select name="country">
-                            <option value="null">-</option>
+                        <select id="country" required <?php echo $signed ? 'disabled="true"' : '' ?> name="country">
+                            <option value="null"></option>
                             <?php
-                            foreach ($countries as $country) {
+                            foreach ($countriesAll as $country) {
                                 printf('<option value="%s">%s</option>', $country["id"], $country["country_name"]);
                             }
                             ?>
                         </select>
+                        <label for="country">pays *</label>
+                    </div>
+                    <div class="form-group__field">
+                        <input id="activity" <?php echo $signed ? 'readonly' : '' ?> type="text" name="activity" />
+                        <label for="activity">activité / situation</label>
                     </div>
 
-                    <div class="checkbox">
-                        <input id="accept" name="accept" type="checkbox" />
-                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a href="#">signataires</a>.
+                    <div class="checkbox grey1">
+                        <input required class="chk" <?php echo $signed ? 'onclick="return false;"' : '' ?> id="accept" name="accept" type="checkbox" />
+                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a href="/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
                     </div>
-                    <a class="form__sign" href="javascript:;" onclick="document.getElementById('sign-form').submit();">Je signe</a>
 
-                    <div class="form__apropos__title grey2">A propos du site</div>
+
+                    <?php
+
+                    if ($signed) {
+                    ?>
+                        <div class="thanks bold"><span class="red1">Merci</span> <br>d’avoir rejoint<br> les signataires </div>
+                    <?php
+                    } else {
+                    ?>
+
+
+                        <button class="submit-btn red1 bold" type="submit"><span class="underline">Je signe</span></button>
+                        <!-- <a class="form__sign" href="javascript:;" onclick="document.getElementById('sign-form').submit();">Je signe</a> -->
+
+
+                        <button id="fill" type="button"> fill</button>
+                    <?php
+                    }
+                    ?>
+
+
+                    <div class="form__apropos__title grey2">À propos<br>
+                        <div class="flex">
+                            <div class="space-right">
+                                du site
+                            </div>
+                            <svg class="chevron chevron2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+
+                                <g>
+                                    <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093 		" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                     <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
                         Design
                         Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig, en 2020-2021. Le
@@ -167,7 +219,7 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
                         Le développement a été assuré par Daniel Djordjevic.</p>
                 </form>
             </div>
-            <div>
+            <div class="col">
                 <select id="sort-names">
                     <option <?php echo $sort == 'date-desc' || !isset($sort) ? 'selected="selected"' : '' ?> value="date-desc">Signataires récents</option>
                     <option <?php echo $sort == 'date-asc' ? 'selected="selected"' : '' ?> value="date-asc">Premiers signataires</option>
@@ -175,13 +227,15 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
                     <option <?php echo $sort == 'nom-desc' ? 'selected="selected"' : '' ?> value="nom-desc">De Z à A</option>
                 </select>
 
-                <?php
-                foreach ($rows as $row) {
-                    printf("<div>%s %s</div>", $row["firstName"], $row["lastName"]);
-                }
-                ?>
+                <div class="rows">
+                    <?php
+                    foreach ($rows as $row) {
+                        printf('<div class="row blue2">%s %s</div>', $row["firstName"], $row["lastName"]);
+                    }
+                    ?>
+                </div>
             </div>
-            <div>
+            <div class="col">
                 <select name="country" id="filter_countries">
                     <option value="">Pays</option>
                     <?php
@@ -195,24 +249,26 @@ $total = $pdo->query('select count(*) from signataires')->fetchColumn();
                     ?>
                 </select>
 
-                <?php
-                foreach ($rows as $row) {
-                    printf("<div>%s</div>", $row["countryName"]);
-                }
-                ?>
+                <div class="rows">
+                    <?php
+                    foreach ($rows as $row) {
+                        printf('<div class="row blue4">%s</div>', $row["countryName"]);
+                    }
+                    ?>
+                </div>
             </div>
-            <div>
+            <div class="col">
                 <select>
-                    <option>Activité/Situation</option>
-                    <option>De A à Z</option>
-                    <option>De Z à A</option>
+                    <option>Activité / Situation</option>
                 </select>
 
-                <?php
-                foreach ($rows as $row) {
-                    printf("<div>%s</div>", $row["activity"]);
-                }
-                ?>
+                <div class="rows">
+                    <?php
+                    foreach ($rows as $row) {
+                        printf('<div class="row blue5">%s</div>', $row["activity"]);
+                    }
+                    ?>
+                </div>
             </div>
         </div>
 
