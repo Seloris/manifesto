@@ -227,7 +227,7 @@ header .menu {
 
 .space-right {
     margin-right: 10px;
-    width: 74px;
+    width: 84px;
 }
 
 svg {
@@ -267,10 +267,12 @@ img.menu__flag {
     width: 66%;
     /* transition: opacity 0.175s ease-in-out; */
     opacity: 0;
+    max-height: 120px;
 }
 
 .menu__text.visible {
     opacity: 1;
+    max-height: none;
 }
 
 .title {

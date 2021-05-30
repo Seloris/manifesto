@@ -102,12 +102,10 @@ $pdo = null;
                     <a href="/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
                         Liste des signataires</a>
                 </div>
-                <p class="menu__text grey1">Le manifeste « Pour une pratique soutenable de
-                    la création » est issu d’initiatives et d’échanges entre Vonnik Hertig et Roxane Jubert et Annabel
-                    Vergne, qui ont réuni un groupe rassemblant des étudiant·es, des personnels et des enseignant·es
-                    de l’ENSAD, afin d’engager une réflexion
-                    transversale et de parvenir à un texte qui formule un engagement collectif face aux déséquilibres
-                    planétaires et aux enjeux écologiques.</p>
+                <p class="menu__text grey1">Le <i>Manifeste pour une pratique soutenable de la création</i> a été rédigé à l’ENSAD (Paris, France) en 2019 par Vonnik Hertig, Roxane Jubert et Annabel Vergne, et a été finalisé par un groupe élargi à Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot et Christophe Thomas. Ce manifeste, issu d’initiatives croisées et nourri de nombreux échanges d’un collectif, est porté par un groupe rassemblant des étudiant·es, des personnels administratifs, des responsables d’atelier et des enseignant·es de l’ENSAD. Il vise à formuler une réflexion transversale – comme base d’un engagement commun et participatif face aux déséquilibres planétaires et aux enjeux écologiques, sociaux et sanitaires.
+                    Ce manifeste, diffusé au sein de l’ENSAD fin 2019, a alors recueilli 160 signatures, représentatives de toutes les composantes de l’école.
+                    Notre intention est de partager ce texte avec toutes les personnes qui s’y reconnaissent et qui souhaitent rejoindre les signataires. Nous enrichirons au fil du temps les langues de traduction de ce site web, ouvert en juin 2021.
+                </p>
             </div>
             <div class="title">
                 <a href="/index.php" class="title__main medium">Manifeste</a>
@@ -202,15 +200,10 @@ $pdo = null;
                         </svg>
                     </div>
                 </div>
-                <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
-                    Design
-                    Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig, en 2020-2021. Le
-                    graphisme de ce site reprend et prolonge les choix effectués pour <a href="#">la première mise
-                        en forme de
-                        ce manifeste sur panneaux sérigraphiés</a>, basée sur un procédé de récupération de grands
-                    supports
-                    de bois et de restes d’encres sérigraphiques.
-                    Le développement a été assuré par Daniel Djordjevic.</p>
+                <p class="form__apropos grey1">Ce site est le fruit d’un travail collaboratif. Il garde la trace de la <a href="/apropos.php">première mise en forme du manifeste : une installation sérigraphiée placée dans l’espace d’entrée de l’ENSAD</a>. Conception graphique du site : Madeleine Lequoy, étudiante en Design Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig.<br>
+                    Le graphisme et les couleurs de ce site se fondent sur des choix effectués pour la <a href="/apropos.php">présentation initiale du manifeste, réalisée en sérigraphie fin 2019 sur de grandes planches de bois</a>, entièrement à base de matériaux de récupération (panneaux de bois trouvés dans le garage de l’école, et restes d’encres sérigraphiques, à partir d’un choix très restreint de couleurs au moment de la rentrée 2019).
+                    Développement du site : Daniel Djordjevic, 2021.
+                </p>
             </div>
 
 
