@@ -23,17 +23,32 @@ $sql = "INSERT INTO signataires (firstName, lastName, email, activity, country, 
 if (mysqli_query($link, $sql)) {
     echo "OK";
 } else {
-    echo "OUPS $sql. " . mysqli_error($link);
-}
+    $err = mysqli_error($link);
 
+    if (isset($err) && strpos($err, "Duplicate entry") === 0) {
+        $err = 2;
+    } else {
+        $err = 1;
+    }
+}
 // Close connection
 mysqli_close($link);
 
+$url = "";
 
 if (isset($_REQUEST["destination"])) {
-    header("Location: {$_REQUEST["destination"]}");
+    $url = $_REQUEST["destination"];
 } else if (isset($_SERVER["HTTP_REFERER"])) {
-    header("Location: {$_SERVER["HTTP_REFERER"]}");
+    $url = $_SERVER["HTTP_REFERER"];
 } else {
-    /* some fallback, maybe redirect to index.php */
+    echo 'Une erreur interne est survenue.';
 }
+
+if ($url != "" && !empty($err)) {
+    $url .= "?tri=date-desc&error={$err}";
+} else if ($url != "" && empty($err)) {
+    $url .= "?tri=date-desc&signed=1";
+}
+
+// echo $url;
+header("Location: {$url}");

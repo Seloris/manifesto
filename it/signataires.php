@@ -64,12 +64,13 @@ $pdo = null;
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reboot.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/signataires.css" />
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/signataires.css" />
 
 
-    <title></title>
+    <title>Manifesto</title>
 </head>
 
 <body>
@@ -98,8 +99,11 @@ $pdo = null;
                             <img title="Italiano" src="/img/italie.png" alt="Italiano" class="menu__flag"></a>
                     </div>
                 </div>
+
+
+
                 <div class="menu__bar menu__bar2">
-                    <a href="/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
+                    <a href="/it/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
                         Liste des signataires</a>
                 </div>
                 <p class="menu__text grey1">Le manifeste « Pour une pratique soutenable de
@@ -110,16 +114,12 @@ $pdo = null;
                     planétaires et aux enjeux écologiques.</p>
             </div>
             <div class="title">
-                <a href="/index.php" class="title__main medium">Manifeste</a>
-                <div class="title__sub red1 medium">pour une pratique soutenable <br>de la création</div>
-                <div class="title__descr purple2 bold">À l’initiative d’un collectif de l’École Nationale Supérieure <br>
-                    des
-                    Arts
-                    Décoratifs (ENSAD – Paris, France)</div>
+                <a href="/it/index.php" class="title__main medium">Manifesto</a>
+                <div class="title__sub red1 medium">per una pratica sostenibile<br>della creazione</div>
+                <div class="title__descr purple2 bold">All’iniziativa di un collettivo dell’École Nationale Supérieure des Arts Décoratifs<br>(Scuola Nazionale Superiore delle arti Decorative), ENSAD – Parigi, Francia</div>
             </div>
             <div class="spacer"></div>
         </header>
-
         <div class="main-container">
             <div class="form">
 
@@ -127,7 +127,7 @@ $pdo = null;
                 <?php
 
                 $signed = isset($_GET['signed']) ?  $_GET['signed'] : 0;
-                $url = '/signataires.php';
+                $url = '/it/signataires.php';
 
                 if ($signed) {
                 ?>
@@ -135,7 +135,7 @@ $pdo = null;
                 <?php
                 } else {
                 ?>
-                    <a href="/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
+                    <a href="/it/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
                         <div class="underline">signataires</div>
                     </a>
 
@@ -144,7 +144,7 @@ $pdo = null;
                 ?>
                 <p class="grey1 form__intro">Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).</p>
 
-                <form id="sign-form" action="add-signataire.php" method="post">
+                <form id="sign-form" action="/add-signataire.php" method="post">
                     <input id="destination" type="hidden" name="destination" value="<?php echo $url ?>" />
 
                     <div class="form-group__field">
@@ -174,12 +174,12 @@ $pdo = null;
                     </div>
                     <div class="form-group__field">
                         <input maxlength="50" id="activity" <?php echo $signed ? 'readonly' : '' ?> type="text" name="activity" />
-                        <label for="activity">activité / organisme / établissement</label>
+                        <label for="activity">activité / situation</label>
                     </div>
 
                     <div class="checkbox grey1">
                         <input required class="chk" <?php echo $signed ? 'onclick="return false;"' : '' ?> id="accept" name="accept" type="checkbox" />
-                        <label for="accept">J’accepte que ces informations soient affichées sur la page des <a href="/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
+                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a href="/it/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
                     </div>
 
 
@@ -243,7 +243,7 @@ $pdo = null;
                     </div>
                     <div class="col">
                         <select class="activity">
-                            <option>Activité / organisme / établissement</option>
+                            <option>Activité / situation / établissement</option>
                         </select>
                     </div>
                 </div>

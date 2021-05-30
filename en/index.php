@@ -30,10 +30,10 @@ $pdo = null;
     <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reboot.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/reboot.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 
     <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -45,7 +45,6 @@ $pdo = null;
     <div class="app">
         <header>
             <div class="menu">
-
                 <div class="menu__bar menu__bar1">
                     <div class="menu__bar__title grey2">
                         <div class="space-right">
@@ -67,11 +66,13 @@ $pdo = null;
                             <img title="Italiano" src="/img/italie.png" alt="Italiano" class="menu__flag"></a>
                     </div>
                 </div>
+
+
+
                 <div class="menu__bar menu__bar2">
-                    <a href="/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
+                    <a href="/en/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
                         Liste des signataires</a>
                 </div>
-
                 <p class="menu__text grey1">Le manifeste « Pour une pratique soutenable de
                     la création » est issu d’initiatives et d’échanges entre Vonnik Hertig et Roxane Jubert et Annabel
                     Vergne, qui ont réuni un groupe rassemblant des étudiant·es, des personnels et des enseignant·es
@@ -80,28 +81,25 @@ $pdo = null;
                     planétaires et aux enjeux écologiques.</p>
             </div>
             <div class="title">
-                <a href="/index.php" class="title__main medium">Manifeste</a>
-                <div class="title__sub red1 medium">pour une pratique soutenable <br>de la création</div>
-                <div class="title__descr purple2 bold">À l’initiative d’un collectif de l’École Nationale Supérieure <br>
-                    des
-                    Arts
-                    Décoratifs (ENSAD – Paris, France)</div>
+                <a href="/en/index.php" class="title__main medium">Manifesto</a>
+                <div class="title__sub red1 medium">for Sustainable Practices<br>in Creative Activities</div>
+                <div class="title__descr purple2 bold">Initiated by a collective at the École Nationale Supérieure des Arts Décoratifs<br>(National Higher School of Decorative Arts), ENSAD – Paris, France</div>
             </div>
             <div class="spacer"></div>
         </header>
 
         <div class="main-container">
             <div class="form">
-                <a href="/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
+                <a href="/en/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
                     <div class="underline">signataires</div>
                 </a>
                 <p class="grey1 form__intro">Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).</p>
 
-                <form id="sign-form" action="add-signataire.php" method="post">
+                <form id="sign-form" action="/add-signataire.php" method="post">
                     <?php
 
                     $signed = isset($_GET['signed']) ?  $_GET['signed'] : 0;
-                    $url = '/signataires.php';
+                    $url = 'en/signataires.php';
 
                     ?>
 
@@ -134,12 +132,12 @@ $pdo = null;
                     </div>
                     <div class="form-group__field">
                         <input maxlength="50" id="activity" <?php echo $signed ? 'readonly' : '' ?> type="text" name="activity" />
-                        <label for="activity">activité / organisme / établissement</label>
+                        <label for="activity">activité / situation</label>
                     </div>
 
                     <div class="checkbox grey1">
                         <input required class="chk" <?php echo $signed ? 'onclick="return false;"' : '' ?> id="accept" name="accept" type="checkbox" />
-                        <label for="accept">J’accepte que ces informations soient affichées sur la page des <a href="/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
+                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a href="en/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
                     </div>
 
 
@@ -179,7 +177,7 @@ $pdo = null;
                     <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
                         Design
                         Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig, en 2020-2021. Le
-                        graphisme de ce site reprend et prolonge les choix effectués pour <a href="/apropos.php">la première mise
+                        graphisme de ce site reprend et prolonge les choix effectués pour <a href="/en/apropos.php">la première mise
                             en forme de
                             ce manifeste sur panneaux sérigraphiés</a>, basée sur un procédé de récupération de grands
                         supports
@@ -189,107 +187,48 @@ $pdo = null;
             </div>
             <div>
 
-                <p class="blue1">Face aux enjeux environnementaux et aux
-                    immenses défis écologiques, nous toutes
-                    et tous, concernés par la création, sommes
-                    déterminés à nous inscrire dans un
-                    mouvement de transition et de
-                    reconfiguration. L’urgence de la situation
-                    actuelle nous oblige à mobiliser nos capacités
-                    de compréhension, de ressaisissement,
-                    d’expression et de réinvention.</p>
+                <p class="blue1">Faced with today’s highly critical environmental and ecological challenges, all of us involved in creative activities have decided to implement a major movement of transition and reconfiguration. The urgency of the current situation requires us to enforce our capacity to assess, rethink, express and reinvent.</p>
                 <br>
-                <p class="blue2">Au-delà d’une prise de conscience, il importe
-                    de chercher des solutions et d’agir, de mettre la
-                    création, le design et l’art au service des enjeux
-                    du présent et du futur. Les défis à relever
-                    concernent avant tout la préservation de
-                    l’environnement, qui implique la soutenabilité
-                    et le renouvellement de nos pratiques aussi
-                    bien que de nos modes de vie. Le design et l’art
-                    ont leur rôle à jouer pour contribuer à cette
-                    prise de conscience croissante, et participer
-                    à la recherche de cet équilibre qui vise à
-                    satisfaire durablement les besoins
-                    fondamentaux de l’environnement et du vivant.</p>
+                <p class="blue2">Over and above raising awareness, we consider it imperative to seek solutions and act accordingly – to put creative projects, design and art at the very heart of our challenges – both today and tomorrow. Our overriding concern is with the preservation of the environment, which requires the sustainability and renewal of our habitual practices as well as our lifestyles. Design and art have a vital role to play in contributing to this growing awareness, and in allowing us to find the right balance to satisfy the basic needs of the environment and of living things in a sustainable way.</p>
                 <br>
-                <p class="blue3">Pour ces raisons, nous nous engageons à
-                    prendre activement notre part dans
-                    l’adoption de nouvelles pratiques
-                    professionnelles, individuelles, collectives et
-                    comportementales. Au-delà, il s’agit
-                    d’imaginer, de projeter et de mettre en place
-                    de nouvelles modalités de fonctionnement
-                    – citoyennes, solidaires, environnementales,
-                    écologiques, économiques, etc.</p>
+                <p class="blue3">For these reasons, we are committed to adopting actively new professional, individual, collective and behavioural practices. Beyond that, we will need to conceive, plan and implement new operating methods – civic, cooperative, environmental, ecological, economic, etc.</p>
             </div>
             <div>
-                <div class="red2 medium">Nous voulons contribuer :</div>
+                <div class="red2 medium">Our goal is to foster: </div>
                 <ul class="red2">
-                    <li>– à l’émergence d’un monde soutenable,
-                        durable et résilient,</li>
-                    <li>– à l’adoption de valeurs éthiques
-                        respectueuses du vivant, de l’environnement
-                        et de l’écosphère,</li>
+                    <li>– the emergence of a sustainable and resilient world</li>
+                    <li>– the adoption of ethical values that protect life, the environment and the ecosphere</li>
                     <li>– à l’utilisation raisonnée des ressources,
                     </li>
-                    <li>– à la considération du cycle de vie des
-                        objets,</li>
-                    <li>– à un moindre impact environnemental
-                        de nos choix, de nos actions et de nos
-                        productions.</li>
+                    <li>– the rational use of resources</li>
+                    <li>– the consideration of the entire life cycle of products
+                        and to reduce the environmental impact of our choices, our actions and our productions.
+                    </li>
                 </ul>
 
                 <br>
-                <p class="blue1">Pour cela, nous devons redéfinir nos priorités,
-                    développer des savoirs appropriés,
-                    réinterroger nos pratiques, travailler en
-                    intégrant la sobriété, identifier et distinguer
-                    les besoins fondamentaux, opter pour les
-                    solutions qui épargnent la santé
-                    environnementale et le vivant, éliminer ce
-                    qui relève du gaspillage.</p>
+                <p class="blue1">To this end, we need to redefine our priorities, develop the necessary expertise, question our practices, work with frugality in mind, identify and distinguish fundamental needs, opt for solutions that preserve environmental health and life, and eliminate all forms of waste.</p>
 
-                <p class="blue1">Ces objectifs impliquent une conscience et
-                    une action écologiques, qui participent d’une
-                    vision holistique et solidaire du monde.</p>
+                <p class="blue1">These objectives require ecological awareness and action, espousing a holistic, interdependent vision of the world.</p>
             </div>
             <div>
-                <div class="blue2 medium">Nous soulignons la responsabilité des créateurs
-                    et créatrices dans ce grand chantier social et
-                    environnemental :</div>
+                <div class="blue2 medium">We would like to emphasize the responsibility of all creatives in this major social and environmental undertaking in: </div>
                 <ul class="blue2">
-                    <li>– nous sommes responsables de nos œuvres
-                        et de leurs réalisations, dans toutes leurs
-                        dimensions et implications,</li>
-                    <li>– dans le cadre des projets, nous devons
-                        évaluer le sens de la commande, de l’œuvre,
-                        du produit ou du service, au regard des
-                        objectifs de soutenabilité,</li>
-                    <li>– nous devons, par une attitude soucieuse de
-                        l’état du monde et respectueuse de la nature,
-                        considérer l’économie de matière et d’énergie
-                        comme une valeur ajoutée au projet,</li>
-                    <li>– nous affirmons l’importance de pratiques
-                        humbles,</li>
-                    <li>– nous souhaitons contribuer à réduire toute
-                        nuisance sur les écosystèmes,</li>
-                    <li>– nous devons privilégier les choix durables,
-                        le réemploi plutôt que le neuf, la simplicité de
-                        l’utilisation et de la pratique, la réparabilité, la
-                        recyclabilité et la biodégradabilité.</li>
+                    <li>– taking responsibility for our work and the process through which it materializes, in all its dimensions and implications</li>
+                    <li>– for each project, evaluating the reason for the commission, work, product or service in light of sustainable objectives</li>
+                    <li>– considering the economy of materials and energy as integral and an added value to each project – a vital reflection of our concern for the state of the world and our commitment to nature</li>
+                    <li>– promoting frugal practices</li>
+                    <li>– helping to alleviate harm to our ecosystems</li>
+                    <li>– opting for sustainable choices and favouring reuse to limit the production of new objects</li>
+                    <li>– prioritizing simple, repairable, recyclable and biodegradable methods and products.
+                    </li>
                 </ul>
                 <br>
-                <p class="red3">En tant que créateurs, créatrices, citoyennes
-                    et citoyens, nous devons œuvrer à l’intérêt
-                    collectif et général. L’actuel enjeu planétaire
-                    représente un défi à saisir concernant nos
-                    capacités d’imagination et de création, ainsi
-                    que notre exigence d’éthique. Pour cela, il
-                    nous faut agir avec détermination, et viser une
-                    transformation aussi lucide que stimulante.</p><br><br>
+                <p class="red3">In our role both as creatives and citizens, we shall work in the interests of all and sundry. We need to grasp the current global challenge and harness our imagination and creativity in line with our ethical convictions. To this end, we must act with determination and aim for a transformation that is both clear-sighted and stimulating.</p><br>
+                <div class="grey1">English translation by Parry Ebrahimzadeh</div>
+                <br>
                 <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
-                    <div class="contact bold underline">Contact</div>
+                    <div class="contact bold underline">Email contact</div>
                     <div>manifeste.environnement@ensad.fr</div>
                 </a>
             </div>

@@ -221,7 +221,7 @@ sup {
 Links
 */
 a {
-    color: #007bff;
+    color: #516ad3 !important;
     text-decoration: none;
     background-color: transparent;
     /* Remove the gray background on active links in IE 10. */
