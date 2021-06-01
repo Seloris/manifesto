@@ -58,14 +58,14 @@ $(() => {
 
   /**** FORM ****/
 
-  $('input').each((i, el) => {
-    $(el)[0].setAttribute('onkeypress', 'return limitMe(event, this)');
-  });
-
   function limitMe(evt, txt) {
     if (evt.which && evt.which == 8) return true;
     else return txt.value.length < txt.getAttribute('max_length');
   }
+
+  $('input').each((i, el) => {
+    $(el)[0].setAttribute('onkeypress', 'return limitMe(event, this)');
+  });
 
   $('.form input, .form select').on('change', (e) => {
     if (e.currentTarget.value && e.currentTarget.value != 'null') {
@@ -78,13 +78,13 @@ $(() => {
   /**** TOGGLES ****/
   $('.menu__bar1 .menu__bar__title').on('click', (e) => {
     $('.menu__text').toggleClass('visible');
-    $('.chevron1').toggleClass('turn');
+    // $('.chevron1').toggleClass('turn');
     $('.menu__bar2').toggleClass('hide');
   });
 
   $('.form__apropos__title').on('click', (e) => {
     $('.form__apropos').toggleClass('visible');
-    $('.chevron2').toggleClass('turn');
+    // $('.chevron2').toggleClass('turn');
   });
 
   /**** FILL ****/

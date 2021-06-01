@@ -64,12 +64,13 @@ $pdo = null;
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reboot.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/signataires.css" />
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/signataires.css" />
 
 
-    <title></title>
+    <title>Manifesto</title>
 </head>
 
 <body>
@@ -98,26 +99,27 @@ $pdo = null;
                             <img title="Italiano" src="/img/italie.png" alt="Italiano" class="menu__flag"></a>
                     </div>
                 </div>
+
+
+
                 <div class="menu__bar menu__bar2">
-                    <a href="/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
+                    <a href="/it/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
                         Liste des signataires</a>
                 </div>
-                <p class="menu__text grey1">Le <i>Manifeste pour une pratique soutenable de la création</i> a été rédigé à l’ENSAD (Paris, France) en 2019 par Vonnik Hertig, Roxane Jubert et Annabel Vergne, et a été finalisé par un groupe élargi à Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot et Christophe Thomas. Ce manifeste, issu d’initiatives croisées et nourri de nombreux échanges d’un collectif, est porté par un groupe rassemblant des étudiant·es, des personnels administratifs, des responsables d’atelier et des enseignant·es de l’ENSAD. Il vise à formuler une réflexion transversale – comme base d’un engagement commun et participatif face aux déséquilibres planétaires et aux enjeux écologiques, sociaux et sanitaires.
-                    Ce manifeste, diffusé au sein de l’ENSAD fin 2019, a alors recueilli 160 signatures, représentatives de toutes les composantes de l’école.
-                    Notre intention est de partager ce texte avec toutes les personnes qui s’y reconnaissent et qui souhaitent rejoindre les signataires. Nous enrichirons au fil du temps les langues de traduction de ce site web, ouvert en juin 2021.
-                </p>
+                <p class="menu__text grey1">Le manifeste « Pour une pratique soutenable de
+                    la création » est issu d’initiatives et d’échanges entre Vonnik Hertig et Roxane Jubert et Annabel
+                    Vergne, qui ont réuni un groupe rassemblant des étudiant·es, des personnels et des enseignant·es
+                    de l’ENSAD, afin d’engager une réflexion
+                    transversale et de parvenir à un texte qui formule un engagement collectif face aux déséquilibres
+                    planétaires et aux enjeux écologiques.</p>
             </div>
             <div class="title">
-                <a href="/index.php" class="title__main medium">Manifeste</a>
-                <div class="title__sub red1 medium">pour une pratique soutenable <br>de la création</div>
-                <div class="title__descr purple2 bold">À l’initiative d’un collectif de l’École Nationale Supérieure <br>
-                    des
-                    Arts
-                    Décoratifs (ENSAD – Paris, France)</div>
+                <a href="/it/index.php" class="title__main medium">Manifesto</a>
+                <div class="title__sub red1 medium">per una pratica sostenibile<br>della creazione</div>
+                <div class="title__descr purple2 bold">All’iniziativa di un collettivo dell’École Nationale Supérieure des Arts Décoratifs<br>(Scuola Nazionale Superiore delle arti Decorative), ENSAD – Parigi, Francia</div>
             </div>
             <div class="spacer"></div>
         </header>
-
         <div class="main-container">
             <div class="form">
 
@@ -125,7 +127,7 @@ $pdo = null;
                 <?php
 
                 $signed = isset($_GET['signed']) ?  $_GET['signed'] : 0;
-                $url = '/signataires.php';
+                $url = '/it/signataires.php';
 
                 if ($signed) {
                 ?>
@@ -133,7 +135,7 @@ $pdo = null;
                 <?php
                 } else {
                 ?>
-                    <a href="/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
+                    <a href="/it/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1"><?php echo $total; ?></span> <br>
                         <div class="underline">signataires</div>
                     </a>
 
@@ -142,7 +144,7 @@ $pdo = null;
                 ?>
                 <p class="grey1 form__intro">Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).</p>
 
-                <form id="sign-form" action="add-signataire.php" method="post">
+                <form id="sign-form" action="/add-signataire.php" method="post">
                     <input id="destination" type="hidden" name="destination" value="<?php echo $url ?>" />
 
                     <div class="form-group__field">
@@ -172,12 +174,12 @@ $pdo = null;
                     </div>
                     <div class="form-group__field">
                         <input maxlength="50" id="activity" <?php echo $signed ? 'readonly' : '' ?> type="text" name="activity" />
-                        <label for="activity">activité / organisme / établissement</label>
+                        <label for="activity">activité / situation</label>
                     </div>
 
                     <div class="checkbox grey1">
                         <input required class="chk" <?php echo $signed ? 'onclick="return false;"' : '' ?> id="accept" name="accept" type="checkbox" />
-                        <label for="accept">J’accepte que ces informations soient affichées sur la page des <a href="/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
+                        <label for="accept">J’accepte que ces informations soient affichées sur la page <a href="/it/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).
                     </div>
 
 
@@ -200,10 +202,15 @@ $pdo = null;
                         </svg>
                     </div>
                 </div>
-                <p class="form__apropos grey1">Ce site est le fruit d’un travail collaboratif. Il garde la trace de la <a href="/apropos.php">première mise en forme du manifeste : une installation sérigraphiée placée dans l’espace d’entrée de l’ENSAD</a>. Conception graphique du site : Madeleine Lequoy, étudiante en Design Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig.<br>
-                    Le graphisme et les couleurs de ce site se fondent sur des choix effectués pour la <a href="/apropos.php">présentation initiale du manifeste, réalisée en sérigraphie fin 2019 sur de grandes planches de bois</a>, entièrement à base de matériaux de récupération (panneaux de bois trouvés dans le garage de l’école, et restes d’encres sérigraphiques, à partir d’un choix très restreint de couleurs au moment de la rentrée 2019).
-                    Développement du site : Daniel Djordjevic, 2021.
-                </p>
+                <p class="form__apropos grey1">Ce site a été conçu graphiquement par Madeleine Lequoy, étudiante en
+                    Design
+                    Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig, en 2020-2021. Le
+                    graphisme de ce site reprend et prolonge les choix effectués pour <a href="#">la première mise
+                        en forme de
+                        ce manifeste sur panneaux sérigraphiés</a>, basée sur un procédé de récupération de grands
+                    supports
+                    de bois et de restes d’encres sérigraphiques.
+                    Le développement a été assuré par Daniel Djordjevic.</p>
             </div>
 
 
@@ -236,7 +243,7 @@ $pdo = null;
                     </div>
                     <div class="col">
                         <select class="activity">
-                            <option>Activité / organisme / établissement</option>
+                            <option>Activité / situation / établissement</option>
                         </select>
                     </div>
                 </div>

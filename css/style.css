@@ -299,6 +299,7 @@ img.menu__flag {
     margin-top: 1.6em;
     font-size: 1.1em;
     color: #516ad3;
+    margin-left: 10px;
 }
 
 
@@ -458,7 +459,6 @@ select.activity {
 
 .cols {
     display: flex;
-    flex: 1;
     flex-wrap: wrap;
     margin: 0px -18px;
     margin-bottom: 2em;
