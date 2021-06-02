@@ -1,6 +1,15 @@
 $(() => {
   const urlParams = new URLSearchParams(window.location.search);
 
+  if (!urlParams.has('error') && !urlParams.has('signed')) {
+    if ($('.data').length > 0)
+      $('.data')[0].scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'nearest',
+      });
+  }
+
   if (urlParams.has('error')) {
     const error = urlParams.get('error');
     let errMsg = 'Veuillez nous excuser, une erreur est survenue';

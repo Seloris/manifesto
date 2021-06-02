@@ -49,7 +49,7 @@
         <a href="/<?= $lang ?>/index.php" class="title__main medium">
             <?= $tradTitle ?>
         </a>
-        <div class="title__sub red1 medium"> <?= $tradSubTitle1 ?></div>
+        <a href="/<?= $lang ?>/index.php" class="title__sub red1 medium"> <?= $tradSubTitle1 ?></a>
         <div class="title__descr purple2 bold"><?= $tradSubTitle2 ?></div>
     </div>
     <div class="spacer"></div>

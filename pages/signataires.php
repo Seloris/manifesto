@@ -96,6 +96,7 @@ include '_get_signataires.php';
 
     <script src="/js/jquery.js"></script>
     <script src="/js/index.js"></script>
+    <script src="/js/signataires.js"></script>
 </body>
 
 </html>

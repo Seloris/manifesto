@@ -49,7 +49,7 @@ ul {
 
 
 .red1 {
-    color: #d14e14;
+    color: #d14e14 !important;
 }
 
 .red2 {
@@ -300,6 +300,7 @@ img.menu__flag {
     line-height: 1.3;
     margin-top: -0.1em;
     margin-left: 40px;
+    text-decoration: none !important;
 }
 
 .title__descr {
@@ -577,7 +578,7 @@ select.activity {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     align-items: flex-start;
 }
 
@@ -588,6 +589,10 @@ select.activity {
 .app .flex>* {
     align-self: flex-start;
     margin-top: 1em;
+}
+
+.app .flex>div {
+    margin-right: 32px;
 }
 
 .app-propos .flex .form__apropos__title {
