@@ -50,7 +50,6 @@
         </div>
 
         <button <?php echo $signed ? 'disabled' : '' ?> class="submit-btn red1 bold" type="submit"><span class="underline"><?= $tradISign ?></span></button>
-        <button id="fill" type="button"> fill</button>
 
 
     </form>

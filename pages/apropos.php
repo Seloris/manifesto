@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="app">
+    <div class="app app-propos">
         <?php
         $currentPage = 'apropos';
         include '_header.php';
@@ -34,18 +34,21 @@
                 <p class="grey1"><?= $tradPlanche ?></p>
 
 
-                <?php include '_footer.php'; ?>
             </div>
             <div class="image">
                 <img src="/img/manifeste.jpeg">
-                <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
-                    <div class="contact bold underline"><?= $tradContact ?></div>
-                    <div>manifeste.environnement@ensad.fr</div>
-                </a>
             </div>
 
         </div>
 
+        <div class="flex">
+            <div>
+                <?php include '_footer.php'; ?></div>
+            <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
+                <div class="contact bold underline"><?= $tradContact ?></div>
+                <div>manifeste.environnement@ensad.fr</div>
+            </a>
+        </div>
 
     </div>
 

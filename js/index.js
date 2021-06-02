@@ -78,13 +78,12 @@ $(() => {
   /**** TOGGLES ****/
   $('.menu__bar1 .menu__bar__title').on('click', (e) => {
     $('.menu__text').toggleClass('visible');
-    // $('.chevron1').toggleClass('turn');
-    $('.menu__bar2').toggleClass('hide');
+    $('.form').toggleClass('hide');
+    $('.menu__flags').toggleClass('hide');
   });
 
   $('.form__apropos__title').on('click', (e) => {
     $('.form__apropos').toggleClass('visible');
-    // $('.chevron2').toggleClass('turn');
   });
 
   /**** FILL ****/

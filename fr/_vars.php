@@ -142,3 +142,4 @@ $tradSignatairesRecents = 'Signataires récents';
 $tradSignatairesPremiers = 'Premiers signataires';
 $tradSignatairesAtoZ = 'De A à Z';
 $tradSignatairesZtoA = 'De Z à A';
+$tradCountry = 'Pays';

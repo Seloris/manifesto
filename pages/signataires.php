@@ -51,7 +51,7 @@ include '_get_signataires.php';
                     </div>
                     <div class="col">
                         <select name="country" id="filter_countries">
-                            <option value="">Pays</option>
+                            <option value=""><?= $tradCountry ?></option>
                             <?php
                             foreach ($countries as $country) {
                                 $selected =  $countryFilter == $country["id"];
@@ -91,6 +91,7 @@ include '_get_signataires.php';
             </div>
         </div>
 
+        <?php include '_footer.php'; ?>
     </div>
 
     <script src="/js/jquery.js"></script>

@@ -164,7 +164,7 @@ input[type=checkbox] {
 /* App */
 .app {
     max-width: 1200px;
-    margin: 0 24px;
+    margin: 0 24px 24px 24px;
 
 }
 
@@ -192,9 +192,9 @@ header .menu {
 }
 
 .menu__bar2 {
-    position: absolute;
+    /* position: absolute;
     top: 20px;
-    left: 0;
+    left: 0; */
 }
 
 .menu__bar2.hide {
@@ -202,12 +202,11 @@ header .menu {
 }
 
 .menu__bar__title2 {
-    margin-top: 8px;
+    margin-top: 5px;
     text-decoration: none !important;
 }
 
 .flex {
-
     display: flex;
     align-items: center;
 }
@@ -215,7 +214,7 @@ header .menu {
 .menu__bar__title,
 .form__apropos__title {
     line-height: 1.4;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 600;
 }
 
@@ -248,9 +247,14 @@ svg {
 
 .menu__flags {
     display: flex;
-    margin-left: 9px;
-    margin-top: 2px
+    margin: 4em -0.75em;
 }
+
+
+.menu__flags.hide {
+    display: none;
+}
+
 
 .menu__flag {
     display: flex;
@@ -261,17 +265,20 @@ img.menu__flag {
     margin: 0 0.75em;
 }
 
+
 .menu__text {
-    margin-top: 2em;
+    display: none;
+    width: 232px;
+    position: absolute;
     line-height: 1.4;
-    width: 66%;
-    /* transition: opacity 0.175s ease-in-out; */
     opacity: 0;
     max-height: 120px;
+    margin-top: 1.3em;
 }
 
 .menu__text.visible {
     opacity: 1;
+    display: block;
     max-height: none;
 }
 
@@ -309,12 +316,20 @@ img.menu__flag {
     margin: 2.4em 0;
 }
 
-.main-container>div:not(.form) {
+
+
+.columns {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.columns>div {
     min-width: 200px;
     flex: 1;
     margin: 0px 18px;
 }
-
 
 
 .form.readonly #sign-form {
@@ -329,10 +344,14 @@ img.menu__flag {
 
 .form {
     display: flex;
-    width: 220px;
+    width: 232px;
     margin-right: 3em;
     flex-direction: column;
     color: #516ad3;
+}
+
+.form.hide {
+    opacity: 0;
 }
 
 .form__header {
@@ -437,17 +456,21 @@ select.activity {
 } */
 
 .form__apropos__title {
-    margin-top: 1.5em;
+    margin-top: 2.5em;
 }
 
 .form__apropos {
+    max-width: 232px;
     margin-top: 1em;
     /* transition: opacity 0.175s ease-in-out; */
     opacity: 0;
+    display: none;
+    padding-bottom: 3em;
 }
 
 .form__apropos.visible {
     opacity: 1;
+    display: block;
 }
 
 
@@ -455,6 +478,10 @@ select.activity {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+.data .mailto {
+    margin-top: 2em;
 }
 
 .cols {
@@ -511,6 +538,7 @@ select.activity {
 
 
 .image {
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
@@ -518,8 +546,250 @@ select.activity {
 .image img {
     margin-bottom: 2em;
     max-width: 1000px;
+    width: 100%;
 }
 
 .container-apropos .form__apropos__title {
-    margin-top: 20em;
+    margin-top: 2em;
+}
+
+.columns-md {
+    display: none;
+}
+
+
+.menu-xs {
+    display: none;
+}
+
+
+.app>.form__apropos__title,
+.app>.form__apropos {
+    display: none;
+}
+
+/* .app .flex {
+    display: none;
+} */
+
+
+.app .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.app .flex .form__apropos__title {
+    margin-top: 0;
+}
+
+.app .flex>* {
+    align-self: flex-start;
+    margin-top: 1em;
+}
+
+.app-propos .flex .form__apropos__title {
+    display: block;
+}
+
+.app-propos .flex .form__apropos.visible {
+    display: block;
+}
+
+
+@media screen and (max-width: 1032px) {
+
+    .columns {
+        display: none;
+    }
+
+    .columns-md {
+        display: flex;
+        flex: 1;
+    }
+
+    .columns-md>div {
+        min-width: 200px;
+        flex: 1;
+        margin: 0px 18px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .columns-md {
+        flex-direction: column;
+        /* max-width: 80vw; */
+    }
+
+    .menu__text {
+        margin-top: 16em;
+    }
+
+    .columns-md div:last-child {
+        margin-top: 1.5em;
+    }
+
+    .title__main {
+        font-size: 3.4em;
+    }
+
+    .title__sub {
+        font-size: 2.0em;
+    }
+
+    .title__descr {
+        font-size: 1.1em;
+    }
+
+    .container-apropos {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .container-apropos .mailto {
+        display: none;
+    }
+
+
+
+
+    .app-propos .form {
+        margin-bottom: 2em;
+    }
+
+    .app-propos .form p {
+        max-width: 232px;
+    }
+
+    .app-propos .form .form__apropos__title {
+        display: none;
+    }
+
+    .app-propos .form .form__apropos.visible {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .app>.form__apropos__title {
+        display: block;
+    }
+
+    .app>.form__apropos.visible {
+        display: block;
+    }
+
+
+
+
+    .form .form__apropos__title,
+    .form .form__apropos {
+        display: none;
+    }
+
+    .form.hide {
+        display: block !important;
+        opacity: 1;
+    }
+
+    .menu-xs .menu__flags.hide {
+        display: flex !important;
+    }
+
+    .menu__text {
+        margin-top: 1em;
+        position: relative;
+        max-width: 232px;
+    }
+
+
+    .columns-md {
+        margin-top: 4em;
+    }
+
+    .columns-md>div {
+        margin-left: 0;
+    }
+
+    .title {
+
+        margin-top: 1.5em;
+    }
+
+
+    .title__sub,
+    .title__main {
+        margin-left: 20px
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu-xs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .menu__bar__title2 {
+        margin-top: 0;
+    }
+
+
+    .menu-list>*:first-child {
+        margin-right: 18px;
+    }
+
+    .menu__flags {
+        margin: 2em -0.75em;
+    }
+
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .form {
+        width: 100%;
+        margin-right: 0;
+    }
+
+
+    .form__apropos {
+        max-width: 232px;
+    }
+
+    #nb-signataires {
+        margin: 0 0.3em;
+    }
+
+
+    .form__header {
+        display: flex;
+        align-items: center;
+    }
+
+    .form__header br {
+        display: none;
+    }
+
+
+
 }

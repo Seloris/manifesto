@@ -47,40 +47,78 @@ $pdo = null;
 
         <div class="main-container">
             <?php include '_form.php'; ?>
-            <div>
+            <div class="columns">
+                <div>
 
-                <p class="blue1"><?= $tradManifP1 ?></p>
-                <br>
-                <p class="blue2"><?= $tradManifP2 ?></p>
-                <br>
-                <p class="blue3"><?= $tradManifP3 ?></p>
-            </div>
-            <div>
-                <div class="red2 medium"><?= $tradManifListHeader1 ?></div>
-                <ul class="red2">
-                    <?= $tradManifList1 ?>
-                </ul>
+                    <p class="blue1"><?= $tradManifP1 ?></p>
+                    <br>
+                    <p class="blue2"><?= $tradManifP2 ?></p>
+                    <br>
+                    <p class="blue3"><?= $tradManifP3 ?></p>
+                </div>
+                <div>
+                    <div class="red2 medium"><?= $tradManifListHeader1 ?></div>
+                    <ul class="red2">
+                        <?= $tradManifList1 ?>
+                    </ul>
 
-                <br>
-                <p class="blue1"><?= $tradManifP4 ?></p>
-            </div>
-            <div>
-                <div class="blue2 medium"><?= $tradManifListHeader2 ?></div>
-                <ul class="blue2">
-                    <?= $tradManifList2 ?>
-                </ul>
-                <br>
-                <p class="red3"><?= $tradManifP5 ?></p>
-                <br>
-                <?php echo isset($tradTranslator) ?  $tradTranslator : ''; ?>
-                <br>
-                <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
-                    <div class="contact bold underline"><?= $tradContact ?></div>
-                    <div>manifeste.environnement@ensad.fr</div>
-                </a>
+                    <br>
+                    <p class="blue1"><?= $tradManifP4 ?></p>
+                </div>
+                <div>
+                    <div class="blue2 medium"><?= $tradManifListHeader2 ?></div>
+                    <ul class="blue2">
+                        <?= $tradManifList2 ?>
+                    </ul>
+                    <br>
+                    <p class="red3"><?= $tradManifP5 ?></p>
+                    <br>
+                    <?php echo isset($tradTranslator) ?  $tradTranslator : ''; ?>
+                    <br>
+                    <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
+                        <div class="contact bold underline"><?= $tradContact ?></div>
+                        <div>manifeste.environnement@ensad.fr</div>
+                    </a>
+                </div>
             </div>
 
+            <div class="columns-md">
+                <div>
+                    <p class="blue1"><?= $tradManifP1 ?></p>
+                    <br>
+                    <p class="blue2"><?= $tradManifP2 ?></p>
+                    <br>
+                    <p class="blue3"><?= $tradManifP3 ?></p>
+                    <br>
+                    <div class="red2 medium"><?= $tradManifListHeader1 ?></div>
+                    <ul class="red2">
+                        <?= $tradManifList1 ?>
+                    </ul>
+
+                </div>
+                <div>
+                    <p class="blue1"><?= $tradManifP4 ?></p>
+                    <br>
+                    <div class="blue2 medium"><?= $tradManifListHeader2 ?></div>
+                    <ul class="blue2">
+                        <?= $tradManifList2 ?>
+                    </ul>
+                    <br>
+                    <p class="red3"><?= $tradManifP5 ?></p>
+                    <br>
+                    <?php echo isset($tradTranslator) ?  $tradTranslator : ''; ?>
+                    <br>
+                    <a class="mailto blue4" href="mailto:manifeste.environnement@ensad.fr">
+                        <div class="contact bold underline"><?= $tradContact ?></div>
+                        <div>manifeste.environnement@ensad.fr</div>
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <?php include '_footer.php'; ?>
+
+    </div>
 
 
     </div>

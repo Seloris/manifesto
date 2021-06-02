@@ -3,12 +3,12 @@
 $lang = 'it';
 // HEADER
 $tradTitle = 'Manifesto';
-$tradAPropos = 'À propos';
-$tradListeDesSignataires = 'Liste des signataires';
+$tradAPropos = 'A proposito';
+$tradListeDesSignataires = 'Lista dei firmatari';
 
-$tradAProposText = 'Le <i>Manifeste pour une pratique soutenable de la création</i> a été rédigé à l’ENSAD (Paris, France) en 2019 par Vonnik Hertig, Roxane Jubert et Annabel Vergne, et a été finalisé par un groupe élargi à Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot et Christophe Thomas. Ce manifeste, issu d’initiatives croisées et nourri de nombreux échanges d’un collectif, est porté par un groupe rassemblant des étudiant·es, des personnels administratifs, des responsables d’atelier et des enseignant·es de l’ENSAD. Il vise à formuler une réflexion transversale – comme base d’un engagement commun et participatif face aux déséquilibres planétaires et aux enjeux écologiques, sociaux et sanitaires.
-Ce manifeste, diffusé au sein de l’ENSAD fin 2019, a alors recueilli 160 signatures, représentatives de toutes les composantes de l’école.
-Notre intention est de partager ce texte avec toutes les personnes qui s’y reconnaissent et qui souhaitent rejoindre les signataires. Nous enrichirons au fil du temps les langues de traduction de ce site web, ouvert en juin 2021.';
+$tradAProposText = 'Il manifesto per una pratica sostenibile della creazione è stato redatto all’ENSAD (Parigi, Francia) nel 2019 da Vonnik Hertig, Roxane Jubert e Annabel Vergne, ed é stato finalizzato da un gruppo allargato a Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot e Christophe Thomas. Questo manifesto, frutto d’iniziative incrociate alimentate da nutriti scambi all’interno di un collettivo, é sostenuto da un gruppo che riunisce studentesse e studenti, personale amministrativo, responsabili d’atelier e insegnanti dell’ENSAD. Punta alla formulazione di una riflessione trasversale – come base di un impegno comune e partecipativo di fronte ai disequilibri planetari e alle sfide ecologiche, sociali e sanitarie.
+Questo manifesto, diffuso all’interno dell’ENSAD a fine 2019, ha ivi raccolto 160 firme – rappresentative di tutte le componenti della scuola.
+É nostra intenzione condividere questo testo con tutte le persone che vi si riconoscono e che desiderano unirsi ai firmatari. Col tempo arricchiremo le lingue di traduzione di questo sito web, aperto nel mese di giugno 2021.';
 
 $tradSubTitle1 = 'per una pratica sostenibile<br>della creazione';
 
@@ -17,30 +17,30 @@ $tradSubTitle2 = 'All’iniziativa di un collettivo dell’École Nationale Sup�
 
 // FORM
 
-$tradJoinSignataires = '<a href="/it/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1">%s</span> <br>
-<div class="underline">signataires</div>
+$tradJoinSignataires = '<a href="/it/signataires.php" class="form__header bold">Mi unisco ai  <br> <span id="nb-signataires" class="red1">%s</span> <br>
+<div class="underline">firmatari</div>
 </a>';
 
-$tradYouCanSign = 'Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).';
+$tradYouCanSign = 'Potete firmare con nome e cognome o con uno pseudonimo (le menzioni con l’asterisco sono obbligatorie).';
 
-$tradFormLastName = 'nom ou pseudonyme *';
-$tradFormFirstName = 'prénom';
+$tradFormLastName = 'cognome o pseudonimo *';
+$tradFormFirstName = 'nome';
 $tradFormEmail = 'e-mail *';
-$tradFormCountry = 'pays *';
-$tradFormActivity = 'activité / organisme / établissement';
+$tradFormCountry = 'paese *';
+$tradFormActivity = 'attività / situazione / istituto';
 
-$tradFormAccept = 'J’accepte que ces informations soient affichées sur la page des <a href="/it/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).';
+$tradFormAccept = 'Accetto che queste informazioni siano visibili nella lista dei firmatari (solo l’e-mail non vi figurerà).';
 
-$tradISign = 'Je signe';
+$tradISign = 'Firmo';
 
-$tradAProposDuSite = 'À propos de ce site';
+$tradAProposDuSite = 'A proposito di questo sito';
 
-$tradAProposDuSiteP = 'Ce site est le fruit d’un travail collaboratif. Il garde la trace de la <a href="/it/apropos.php">première mise en forme du manifeste : une installation sérigraphiée placée dans l’espace d’entrée de l’ENSAD</a>. Conception graphique du site : Madeleine Lequoy, étudiante en Design Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig.<br>
-Le graphisme et les couleurs de ce site se fondent sur des choix effectués pour la <a href="/it/apropos.php">présentation initiale du manifeste, réalisée en sérigraphie fin 2019 sur de grandes planches de bois</a>, entièrement à base de matériaux de récupération (panneaux de bois trouvés dans le garage de l’école, et restes d’encres sérigraphiques, à partir d’un choix très restreint de couleurs au moment de la rentrée 2019).
-Développement du site : Daniel Djordjevic, 2021.';
+$tradAProposDuSiteP = 'Questo sito é frutto di un lavoro collaborativo. Conserva le tracce della <a href="/it/apropos.php">prima forma del manifesto: un’installazione serigrafica situata all’ingresso dell’ENSAD. Concezione grafica del sito: Madeleine Lequoy, studentessa in Design Grafico all’ENSAD</a>, nell’ambito del corso di Roxane Jubert e Vonnik Hertig.
+La grafica e i colori del sito si basano su scelte effettuate per la <a href="/it/apropos.php">presentazione iniziale del manifesto, alla fine del 2019, realizzate in serigrafia su grandi pannelli di legno</a>, a base unicamente di materiali di recupero (pannelli di legno trovati nel garage della scuola e resti di inchiostri serigrafici, con una scelta molto limitata di colori all’inizio dell’anno accademico 2019).
+Realizzazione del sito: Daniel Djordjevic, 2021.';
 
 
-$tradThanks = '<div class="thanks bold"><span class="red1">Merci</span> <br>d’avoir rejoint<br> les signataires </div>';
+$tradThanks = '<div class="thanks bold"><span class="red1">Grazie</span> <br>di esserti unito<br> ai firmatari </div>';
 
 
 
@@ -80,9 +80,11 @@ $tradContact = 'Contatto';
 
 
 // A propos
-$tradPlanche = 'Première mise en forme du manifeste (2019-2020) : planches de bois récupérées, poncées, puis imprimées dans l’atelier de sérigraphie de l’ENSAD avec des restes d’encre. Conçu par Anna Skoczeń, César Debargue, Charles Guilhembet et Madeleine Lequoy, au sein du cours Édition en 4e année Design Graphique. Vue de l’installation pour les portes ouvertes de l’ENSAD de janvier 2020 (photo : Roxane Jubert).';
+$tradPlanche = 'Prima forma del manifesto (2019-2020): pannelli di legno di recupero, levigati poi stampati nell’atelier di serigrafia dell’ENSAD con dei resti d’inchiostro. Ideati da Anna Skoczeń, César Debargue, Charles Guilhembet e Madeleine Lequoy, nell’ambito del corso Edizione, 4° anno Design Grafico. Scorcio dell’installazione alle giornate di apertura al pubblico dell’ENSAD, gennaio 2020 (foto: Roxane Jubert).
+';
 
-$tradSignatairesRecents = 'Signataires récents';
-$tradSignatairesPremiers = 'Premiers signataires';
-$tradSignatairesAtoZ = 'De A à Z';
-$tradSignatairesZtoA = 'De Z à A';
+$tradSignatairesRecents = 'Firmatari recenti';
+$tradSignatairesPremiers = 'Primi firmatari';
+$tradSignatairesAtoZ = 'Da A a Z';
+$tradSignatairesZtoA = 'Da Z a A';
+$tradCountry = 'Paese';

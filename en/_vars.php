@@ -3,12 +3,12 @@
 $lang = 'en';
 // HEADER
 $tradTitle = 'Manifesto';
-$tradAPropos = 'À propos';
-$tradListeDesSignataires = 'Liste des signataires';
+$tradAPropos = 'About us';
+$tradListeDesSignataires = 'List of signatories';
 
-$tradAProposText = 'Le <i>Manifeste pour une pratique soutenable de la création</i> a été rédigé à l’ENSAD (Paris, France) en 2019 par Vonnik Hertig, Roxane Jubert et Annabel Vergne, et a été finalisé par un groupe élargi à Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot et Christophe Thomas. Ce manifeste, issu d’initiatives croisées et nourri de nombreux échanges d’un collectif, est porté par un groupe rassemblant des étudiant·es, des personnels administratifs, des responsables d’atelier et des enseignant·es de l’ENSAD. Il vise à formuler une réflexion transversale – comme base d’un engagement commun et participatif face aux déséquilibres planétaires et aux enjeux écologiques, sociaux et sanitaires.
-Ce manifeste, diffusé au sein de l’ENSAD fin 2019, a alors recueilli 160 signatures, représentatives de toutes les composantes de l’école.
-Notre intention est de partager ce texte avec toutes les personnes qui s’y reconnaissent et qui souhaitent rejoindre les signataires. Nous enrichirons au fil du temps les langues de traduction de ce site web, ouvert en juin 2021.';
+$tradAProposText = 'The <i>Manifesto for Sustainable Practices in Creative Activities</i> was cowritten by Vonnik Hertig, Roxane Jubert and Annabel Vergne in 2019 at ENSAD (Paris, France), and was finalized by a group which included Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot and Christophe Thomas. It was the fruit of diverse initiatives and enriched by numerous exchanges within a collective. It was supported by a group bringing together students, administrative staff, workshop coaches and teachers – all members of ENSAD. It aims to foster transversal fresh thinking – as a basis for a shared and participative commitment to deal with worldwide imbalances, and ecological, social and health challenges.
+This manifesto was circulated at ENSAD at the end of 2019, when 160 members signed up to it – across all sections of the school.
+We aim to share this text with everyone who identifies with it and wishes to sign up. We will gradually add other languages on this website, launched in June 2021.';
 
 $tradSubTitle1 = 'for Sustainable Practices<br>in Creative Activities';
 
@@ -17,37 +17,36 @@ $tradSubTitle2 = 'Initiated by a collective at the École Nationale Supérieure 
 
 // FORM
 
-$tradJoinSignataires = '<a href="/en/signataires.php" class="form__header bold">Je rejoins les <br> <span id="nb-signataires" class="red1">%s</span> <br>
-<div class="underline">signataires</div>
+$tradJoinSignataires = '<a href="/en/signataires.php" class="form__header bold">Sign the manifesto <br> <span id="nb-signataires" class="red1">%s</span> <div class="underline">signatories</div>
 </a>';
 
-$tradYouCanSign = 'Vous pouvez signer en votre nom et prénom, ou avec un pseudonyme (les mentions avec astérisques sont obligatoires).';
+$tradYouCanSign = 'You can sign with your full name or use a pseudonym (the boxes with asterisks have to be filled).';
 
-$tradFormLastName = 'nom ou pseudonyme *';
-$tradFormFirstName = 'prénom';
-$tradFormEmail = 'e-mail *';
-$tradFormCountry = 'pays *';
-$tradFormActivity = 'activité / organisme / établissement';
+$tradFormLastName = 'last name or pseudonym *';
+$tradFormFirstName = 'first name';
+$tradFormEmail = 'email address *';
+$tradFormCountry = 'country *';
+$tradFormActivity = 'occupation / organization / institution';
 
-$tradFormAccept = 'J’accepte que ces informations soient affichées sur la page des <a href="/en/signataires.php">signataires</a> (seul l’e-mail n’y figurera pas).';
+$tradFormAccept = 'I agree that my personal details (with the exception of my email address) will be posted on the list of signatories.';
 
-$tradISign = 'Je signe';
+$tradISign = 'Submit';
 
-$tradAProposDuSite = 'À propos de ce site';
+$tradAProposDuSite = 'About this website';
 
-$tradAProposDuSiteP = 'Ce site est le fruit d’un travail collaboratif. Il garde la trace de la <a href="/en/apropos.php">première mise en forme du manifeste : une installation sérigraphiée placée dans l’espace d’entrée de l’ENSAD</a>. Conception graphique du site : Madeleine Lequoy, étudiante en Design Graphique à l’ENSAD, dans le cadre de cours de Roxane Jubert et Vonnik Hertig.<br>
-Le graphisme et les couleurs de ce site se fondent sur des choix effectués pour la <a href="/en/apropos.php">présentation initiale du manifeste, réalisée en sérigraphie fin 2019 sur de grandes planches de bois</a>, entièrement à base de matériaux de récupération (panneaux de bois trouvés dans le garage de l’école, et restes d’encres sérigraphiques, à partir d’un choix très restreint de couleurs au moment de la rentrée 2019).
-Développement du site : Daniel Djordjevic, 2021.';
+$tradAProposDuSiteP = 'This website resulted from teamwork. It bears the imprint of the <a href="/en/apropos.php">first visual presentation of the manifesto: a silkscreen print installation in the entrance hall of ENSAD</a>. Visual design of the website: Madeleine Lequoy, student in Graphic Design at ENSAD, in the classes of Roxane Jubert and Vonnik Hertig.
+The graphics and the colours of the website are based on choices made for the <a href="/en/apropos.php">initial presentation of the manifesto, in silkscreen printing at the end of 2019 on large wooden planks</a>, made solely out of reused materials (wood panels found in the school garage and leftover ink from silkscreen prints, with what was a very limited choice of colours at the start of the school year 2019).
+Website developer: Daniel Djordjevic, 2021.';
 
 
-$tradThanks = '<div class="thanks bold"><span class="red1">Merci</span> <br>d’avoir rejoint<br> les signataires </div>';
+$tradThanks = '<div class="thanks bold"><span class="red1">Thank you</span> <br>for signing<br> the manifesto</div>';
 
 
 
 // MANIFESTE
 $tradManifP1 = 'Faced with today’s highly critical environmental and ecological challenges, all of us involved in creative activities have decided to implement a major movement of transition and reconfiguration. The urgency of the current situation requires us to enforce our capacity to assess, rethink, express and reinvent.';
 
-$tradManifP2 = 'Over and above raising awareness, we consider it imperative to seek solutions and act accordingly – to put creative projects, design and art at the very heart of our challenges – both today and tomorrow. Our overriding concern is with the preservation of the environment, which requires the sustainability and renewal of our habitual practices as well as our lifestyles. Design and art have a vital role to play in contributing to this growing awareness, and in allowing us to find the right balance to satisfy the basic needs of the environment and of living things in a sustainable way.';
+$tradManifP2 = 'Over and above raising awareness, we consider it imperative to seek solutions and act accordingly – to put creative projects, design and art at the very heart of our challenges – both today and tomorrow. Our overriding concern is with the preservation of the environment, which requires the sustainability and renewal of our habitual practices as well as our lifestyles. Design and art have a vital role to play in contributing to this growing awareness, and in allowing us to find the right balance to meet the basic needs of the environment and of living things in a sustainable way.';
 
 $tradManifP3 = 'For these reasons, we are committed to adopting actively new professional, individual, collective and behavioural practices. Beyond that, we will need to conceive, plan and implement new operating methods – civic, cooperative, environmental, ecological, economic, etc.';
 
@@ -56,14 +55,12 @@ $tradManifListHeader1 = 'Our goal is to foster: ';
 
 $tradManifList1 = '<li>– the emergence of a sustainable and resilient world</li>
 <li>– the adoption of ethical values that protect life, the environment and the ecosphere</li>
-<li>– à l’utilisation raisonnée des ressources,
-</li>
 <li>– the rational use of resources</li>
 <li>– the consideration of the entire life cycle of products
-    and to reduce the environmental impact of our choices, our actions and our productions.
+    <br>and to reduce the environmental impact of our choices, our actions and our productions.
 </li>';
 
-$tradManifP4 = 'To this end, we need to redefine our priorities, develop the necessary expertise, question our practices, work with frugality in mind, identify and distinguish fundamental needs, opt for solutions that preserve environmental health and life, and eliminate all forms of waste.<br>These objectives require ecological awareness and action, espousing a holistic, interdependent vision of the world.';
+$tradManifP4 = 'To this end, we need to redefine our priorities, develop the necessary expertise, question our practices, work with frugality in mind, identify and distinguish fundamental needs, opt for solutions that preserve environmental health and life, and eliminate all forms of waste.<br>These objectives require ecological awareness and action, integrating a holistic, interdependent vision of the world.';
 
 $tradManifListHeader2 = 'We would like to emphasize the responsibility of all creatives in this major social and environmental undertaking in: ';
 
@@ -83,9 +80,10 @@ $tradContact = 'Contact';
 
 
 // A propos
-$tradPlanche = 'Première mise en forme du manifeste (2019-2020) : planches de bois récupérées, poncées, puis imprimées dans l’atelier de sérigraphie de l’ENSAD avec des restes d’encre. Conçu par Anna Skoczeń, César Debargue, Charles Guilhembet et Madeleine Lequoy, au sein du cours Édition en 4e année Design Graphique. Vue de l’installation pour les portes ouvertes de l’ENSAD de janvier 2020 (photo : Roxane Jubert).';
+$tradPlanche = 'First visual conception of the manifesto (2019-2020): reused wooden planks, sanded, then printed in the ENSAD silkscreen printing workshop with leftover inks. Designed by Anna Skoczeń, César Debargue, Charles Guilhembet and Madeleine Lequoy, in the 4th year Graphic Design Publication course. View of the installation at ENSAD"s open days in January 2020 (photo: Roxane Jubert).';
 
-$tradSignatairesRecents = 'Signataires récents';
-$tradSignatairesPremiers = 'Premiers signataires';
-$tradSignatairesAtoZ = 'De A à Z';
-$tradSignatairesZtoA = 'De Z à A';
+$tradSignatairesRecents = 'Recent signatories';
+$tradSignatairesPremiers = 'First signatories';
+$tradSignatairesAtoZ = 'From A to Z';
+$tradSignatairesZtoA = 'From Z to A';
+$tradCountry = 'Country';
