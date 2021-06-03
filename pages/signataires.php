@@ -22,8 +22,10 @@ include '_get_signataires.php';
     <link rel="stylesheet" href="/css/style.css" />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
-
-    <title><?= $tradTitle ?></title>
+    <?php
+    $title = $tradTitle . ' – ' . $tradListeDesSignataires;
+    include '_tags.php';
+    ?>
 </head>
 
 <body>
@@ -64,11 +66,6 @@ include '_get_signataires.php';
                         </select>
 
                     </div>
-                    <!-- <div class="col">
-                        <select class="activity">
-                            <option>Activité / organisme / établissement</option>
-                        </select>
-                    </div> -->
                 </div>
 
                 <?php
@@ -77,10 +74,10 @@ include '_get_signataires.php';
                     $country = $row["countryName"];
 
                     if (!empty($activity)) {
-                        $country .= ',&nbsp;';
+                        $country .= ' – ';
                     }
 
-                    printf('<div class="person"><div class="row bold blue2">%s %s</div><div class="row blue4">&nbsp;– %s</div><div class="row blue5">%s</div></div>', $row["lastName"], $row["firstName"], $country, $activity);
+                    printf('<div class="person"><div class="row bold blue2">%s %s</div><div class="row blue4"> – %s</div><div class="row blue5">%s</div></div>', $row["lastName"], $row["firstName"], $country, $activity);
                 }
                 ?>
 

@@ -5,6 +5,7 @@ $lang = 'en';
 $tradTitle = 'Manifesto';
 $tradAPropos = 'About us';
 $tradListeDesSignataires = 'List of signatories';
+$tradLeManifeste = 'Manifesto';
 
 $tradAProposText = 'The <i>Manifesto for Sustainable Practices in Creative Activities</i> was cowritten by Vonnik Hertig, Roxane Jubert and Annabel Vergne in 2019 at ENSAD (Paris, France), and was finalized by a group which included Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot and Christophe Thomas. It was the fruit of diverse initiatives and enriched by numerous exchanges within a collective. It was supported by a group bringing together students, administrative staff, workshop coaches and teachers – all members of ENSAD. It aims to foster transversal fresh thinking – as a basis for a shared and participative commitment to deal with worldwide imbalances, and ecological, social and health challenges.
 This manifesto was circulated at ENSAD at the end of 2019, when 160 members signed up to it – across all sections of the school.

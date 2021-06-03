@@ -1,9 +1,13 @@
 <header>
     <div class="menu">
-        <div class="menu__bar menu__bar1">
+        <div class="menu__bar menu__bar1 menu__bar-apropos">
             <div class="menu__bar__title grey2">
                 <?= $tradAPropos ?>
             </div>
+        </div>
+        <div class="menu__bar menu__bar1">
+            <a href="/<?= $lang ?>/index.php" class="menu__bar__title grey2">
+                <?= $tradLeManifeste; ?></a>
         </div>
         <div class="menu__bar menu__bar2">
             <a href="/<?= $lang ?>/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
@@ -31,10 +35,14 @@
                 <img title="Italiano" src="/img/italie.png" alt="Italiano" class="menu__flag"></a>
         </div>
         <div class="menu-list">
-            <div class="menu__bar menu__bar1">
+            <div class="menu__bar menu__bar1 menu__bar-apropos">
                 <div class="menu__bar__title grey2">
                     <?= $tradAPropos ?>
                 </div>
+            </div>
+            <div class="menu__bar menu__bar1">
+                <a href="/<?= $lang ?>/index.php" class="menu__bar__title grey2">
+                    <?= $tradLeManifeste; ?></a>
             </div>
             <div class="menu__bar menu__bar2">
                 <a href="/<?= $lang ?>/signataires.php" class="menu__bar__title menu__bar__title2 grey2">
@@ -54,3 +62,5 @@
     </div>
     <div class="spacer"></div>
 </header>
+
+<span id="responsive-marker"></span>

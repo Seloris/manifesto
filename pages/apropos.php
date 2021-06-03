@@ -18,8 +18,10 @@
 
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-
-    <title><?= $tradTitle ?></title>
+    <?php
+    $title = $tradTitle . ' – ' . $tradAPropos;
+    include '_tags.php';
+    ?>
 </head>
 
 <body>

@@ -1,9 +1,18 @@
 $(() => {
   const urlParams = new URLSearchParams(window.location.search);
 
-  if (!urlParams.has('error') && !urlParams.has('signed')) {
+  const isMobile = $('#responsive-marker').css('zIndex') == '-1';
+
+  if (!urlParams.has('error') && !urlParams.has('signed') && isMobile) {
     if ($('.data').length > 0)
       $('.data')[0].scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'nearest',
+      });
+
+    if ($('.columns-md').length > 0)
+      $('.columns-md')[0].scrollIntoView({
         block: 'start',
         behavior: 'smooth',
         inline: 'nearest',
@@ -85,7 +94,7 @@ $(() => {
   });
 
   /**** TOGGLES ****/
-  $('.menu__bar1 .menu__bar__title').on('click', (e) => {
+  $('.menu__bar-apropos').on('click', (e) => {
     $('.menu__text').toggleClass('visible');
     $('.form').toggleClass('hide');
     $('.menu__flags').toggleClass('hide');
@@ -94,31 +103,4 @@ $(() => {
   $('.form__apropos__title').on('click', (e) => {
     $('.form__apropos').toggleClass('visible');
   });
-
-  /**** FILL ****/
-  $('#fill').on('click', (e) => {
-    $("input[name='lastName']").val('Djordjevic');
-    $("input[name='firstName']").val('Daniel');
-    $("input[name='email']").val(makeEmail());
-    $("select[name='country'] option:nth(76)").prop('selected', true);
-  });
-
-  function makeEmail() {
-    return 'daniel.djordjevic@outlook.fr';
-    var strValues = 'abcdefg12345';
-    var strEmail = '';
-    var strTmp;
-    for (var i = 0; i < 3; i++) {
-      strTmp = strValues.charAt(Math.round(strValues.length * Math.random()));
-      strEmail = strEmail + strTmp;
-    }
-    strTmp = '';
-    strEmail = strEmail + '@';
-    for (var j = 0; j < 2; j++) {
-      strTmp = strValues.charAt(Math.round(strValues.length * Math.random()));
-      strEmail = strEmail + strTmp;
-    }
-    strEmail = strEmail + '.com';
-    return strEmail;
-  }
 });

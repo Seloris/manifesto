@@ -5,6 +5,7 @@ $lang = 'it';
 $tradTitle = 'Manifesto';
 $tradAPropos = 'A proposito';
 $tradListeDesSignataires = 'Lista dei firmatari';
+$tradLeManifeste = 'Il manifesto';
 
 $tradAProposText = 'Il manifesto per una pratica sostenibile della creazione è stato redatto all’ENSAD (Parigi, Francia) nel 2019 da Vonnik Hertig, Roxane Jubert e Annabel Vergne, ed é stato finalizzato da un gruppo allargato a Clément Assoun, Margot Bonnafous, Michèle Ducret, Marion Leclercq, Clémence Leveugle, Coralie Nadaud, Martine Nicot e Christophe Thomas. Questo manifesto, frutto d’iniziative incrociate alimentate da nutriti scambi all’interno di un collettivo, é sostenuto da un gruppo che riunisce studentesse e studenti, personale amministrativo, responsabili d’atelier e insegnanti dell’ENSAD. Punta alla formulazione di una riflessione trasversale – come base di un impegno comune e partecipativo di fronte ai disequilibri planetari e alle sfide ecologiche, sociali e sanitarie.
 Questo manifesto, diffuso all’interno dell’ENSAD a fine 2019, ha ivi raccolto 160 firme – rappresentative di tutte le componenti della scuola.
@@ -12,7 +13,7 @@ Questo manifesto, diffuso all’interno dell’ENSAD a fine 2019, ha ivi raccolt
 
 $tradSubTitle1 = 'per una pratica sostenibile<br>della creazione';
 
-$tradSubTitle2 = 'All’iniziativa di un collettivo dell’École Nationale Supérieure des Arts Décoratifs<br>(Scuola Nazionale Superiore delle arti Decorative), ENSAD – Parigi, Francia';
+$tradSubTitle2 = 'All’iniziativa di un collettivo dell’École Nationale Supérieure des Arts Décoratifs<br>(Scuola Nazionale Superiore delle Arti Decorative), ENSAD – Parigi, Francia';
 
 
 // FORM
