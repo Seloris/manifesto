@@ -1,6 +1,16 @@
 <?php
 
 $lang = 'en';
+
+// TAGS
+$tradMetaTitleIndex = 'Manifeste pour une pratique soutenable de la création, ENSAD';
+$tradMetaTitleSignataires = 'Liste des signataires du manifeste environnement de l’ENSAD';
+$tradMetaTitleAPropos = 'Première mise en forme du manifeste, installation sérigraphiée, ENSAD, 2019';
+$tradMetaDescr = 'Ce manifeste propose la base d’un engagement commun concernant la création face aux
+défis écologiques et sociaux. Il est le fruit d’une réflexion transversale menée par un collectif
+de l’École Nationale Supérieure des Arts Décoratifs (Paris, France).';
+
+
 // HEADER
 $tradTitle = 'Manifesto';
 $tradAPropos = 'About us';

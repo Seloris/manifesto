@@ -35,7 +35,8 @@ $pdo = null;
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <?php
-    $title = $tradTitle;
+    $currentPage = 'index';
+    $metaTitle = $tradMetaTitleIndex;
     include '_tags.php';
     ?>
 </head>
@@ -43,7 +44,6 @@ $pdo = null;
 <body>
     <div class="app">
         <?php
-        $currentPage = 'index';
         include '_header.php';
         ?>
 

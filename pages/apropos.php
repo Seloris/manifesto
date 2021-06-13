@@ -19,7 +19,8 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
 
     <?php
-    $title = $tradTitle . ' – ' . $tradAPropos;
+    $currentPage = 'apropos';
+    $metaTitle = $tradMetaTitleAPropos;
     include '_tags.php';
     ?>
 </head>
@@ -27,7 +28,6 @@
 <body>
     <div class="app app-propos">
         <?php
-        $currentPage = 'apropos';
         include '_header.php';
         ?>
 

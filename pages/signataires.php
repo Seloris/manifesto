@@ -23,7 +23,8 @@ include '_get_signataires.php';
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <?php
-    $title = $tradTitle . ' – ' . $tradListeDesSignataires;
+    $currentPage = 'signataires';
+    $metaTitle = $tradMetaTitleSignataires;
     include '_tags.php';
     ?>
 </head>
@@ -32,7 +33,6 @@ include '_get_signataires.php';
     <div class="app">
 
         <?php
-        $currentPage = 'signataires';
         include '_header.php';
         ?>
 
