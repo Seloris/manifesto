@@ -13,6 +13,6 @@
 </script>
 
 <!-- Primary Meta Tags -->
-<title><?= $tradTitle ?></title>
+<title><?= $title ?></title>
 <meta name="title" content="Meta Tags — Preview, Edit and Generate">
 <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
